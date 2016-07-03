@@ -88,7 +88,8 @@ class EnchantingTable extends Transparent{
 					return true;
 				}
 			}
-			$player->addWindow($table->getInventory());
+			$player->addWindow(new EnchantInventory($this));
+			$player->craftingType = Player::CRAFTING_ENCHANT;
 		}
 
 		return true;
